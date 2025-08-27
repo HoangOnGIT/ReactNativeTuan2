@@ -1,10 +1,18 @@
-let p = new Promise<string>((resolve) => {
-    setTimeout(
-        () => console.log("Hello Async")
-        , 2000)
+//Bai 1
+// let b1 = new Promise<void>((resolve) => {
+//     setTimeout(
+//         () => console.log("Hello Async")
+//         , 2000)
+// })
+
+
+// b1.then(() => {}).catch(err => console.log(err)
+// )
+
+//B2
+
+let b2 = new Promise<number>((resolve) => {
+    return setTimeout(() => resolve(12), 1000);
 })
 
-p.then(() => {}).catch(err => console.log(err)
-)
-
-
+b2.then(data => console.log(data)).catch((err) => console.log(err))
